@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    height: 60px;
+    
+    
+}
+.logo{
+    height: 60px;
+}
+.logo img{
+    height: 60px;
+    width: 100px;
+    border-radius: 50% 50%;
+}
+.sign-in-btn button{
+    width: 100%;
+}
+.margin-top{
+    margin: 0.82%;
+}
+.cart div{
+    width: 40px;
+    height: 40px;
+    border: thin solid red;
+}
+.cart span{
+    position: absolute;
+    transform: translate(150%,-150%);
+}
+.main-body{
+    background-color: lightblue;
+    min-height: 100vb;
+    height: 100%;
+    max-height: auto;
+   
+    
+}
+
+.main-body .left-menu{
+    background-color: pink;
+    height: 100vh;
+    padding: 2% 0px;
+
+}
+
+.main-body .products > div{
+    float: left;
+    width: 50%;
+    padding: 1rem;
+}
+
+.main-body .ads{
+    background-color: lightgray;
+    height: 100vh;
+    padding: 2% 0px;
+}
+.footer{
+    padding: 2% 0px;
+    background-color: black;
+    color: white;
+}
+
+.left-menu li .cat-name{
+    width: 100%;
+}
+.left-menu li .material-symbols-outline{
+    float: right;
+    color: black;
+
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
