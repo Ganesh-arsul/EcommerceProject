@@ -1,0 +1,11 @@
+<div class="w-100 product">
+    <div class="card" style="padding: 1rem;">
+        <img class="card-img-top" src="assets\Tshirt.jpeg" alt="Card image" style="width: 100%; height: auto;">
+        <div class="card-body">
+            <h4 class="card-title" [innerHtml]="product.prodName"></h4>
+            <p class="card-text" [innerHtml]="product.prodDesc"></p>
+            <p class="card-text" [innerHtml]="'Rs.'+product.prodPrice"></p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+    </div>
+</div>

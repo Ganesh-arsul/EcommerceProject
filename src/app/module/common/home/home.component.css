@@ -1,0 +1,106 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    height: 60px;
+    
+    
+}
+.logo{
+    height: 60px;
+}
+.logo img{
+    height: 60px;
+    width: 100px;
+    border-radius: 50% 50%;
+}
+.sign-in-btn button{
+    width: 100%;
+}
+.margin-top{
+    margin: 0.82%;
+}
+.cart div{
+    width: 40px;
+    height: 40px;
+    border: thin solid red;
+}
+.cart span{
+    position: absolute;
+    transform: translate(150%,-150%);
+}
+.main-body{
+    min-height: 100vb;
+    height: 100%;
+    max-height: auto;
+   
+    
+}
+
+.main-body .left-menu{
+    padding: 0px 0px;
+
+}
+
+.main-body .products{
+    background-color: aqua;
+    padding: 2% 2%;
+}
+.main-body .products > div{
+    float: left;
+    width: 50%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.main-body .products .card {
+    width: 100%; /* Ensure the card fills its container */
+}
+
+.main-body .products .card-img-top {
+    width: 100%; /* Make the image fill its container */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.main-body .ads{
+    background-color: lightgray;
+    height: 100vh;
+    padding: 2% 0px;
+}
+.footer{
+    padding: 2% 0px;
+    background-color: black;
+    color: white;
+}
+
+.left-menu li .cat-name{
+    width: 100%;
+}
+.left-menu li .material-symbols-outline{
+    float: right;
+    color: black;
+
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.left-menu li .cat-name{
+      width: 100%;
+}
+.left-menu li .material-symbols-outlined{
+    float: right;
+    color:black;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.text-truncate{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
