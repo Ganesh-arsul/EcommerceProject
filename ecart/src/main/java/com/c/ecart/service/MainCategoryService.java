@@ -35,9 +35,9 @@ public class MainCategoryService {
 		}
 		return false;
 	}
-	public List<MainCategory>getMainCategories(){
+	public List<MainCategory>getAllMainCategories(){
 		try {
-			mainCategoryRepository.findAll();
+			return mainCategoryRepository.findAll();
 		}
 		catch (Exception ex) {
 			System.err.println("Exception occured in getAllMainCategories: "+ex.getMessage()+"cause "+ex.getCause());

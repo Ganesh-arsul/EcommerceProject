@@ -6,7 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "stock")
 public class Stock {
@@ -25,37 +29,5 @@ public class Stock {
 	@Column(name = "total_sold")
 	private int totalSold;
 
-	public int getStockId() {
-		return stockId;
-	}
-
-	public void setStockId(int stockId) {
-		this.stockId = stockId;
-	}
-
-	public int getProdId() {
-		return prodId;
-	}
-
-	public void setProdId(int prodId) {
-		this.prodId = prodId;
-	}
-
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public int getTotalSold() {
-		return totalSold;
-	}
-
-	public void setTotalSold(int totalSold) {
-		this.totalSold = totalSold;
-	}
-	
 
 }

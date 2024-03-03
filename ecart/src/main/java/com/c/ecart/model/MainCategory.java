@@ -6,7 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "main_category")
 public class MainCategory {
@@ -14,7 +18,7 @@ public class MainCategory {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "main_cat_id")
-	private int maincatId;
+	private int mainCatId;
 	
 	@Column(name ="cat_name")
 	private String catName;
@@ -24,38 +28,5 @@ public class MainCategory {
 	
 	@Column(name = "status")
 	private String status;
-
-	public int getMaincatId() {
-		return maincatId;
-	}
-
-	public void setMaincatId(int maincatId) {
-		this.maincatId = maincatId;
-	}
-
-	public String getCatName() {
-		return catName;
-	}
-
-	public void setCatName(String catName) {
-		this.catName = catName;
-	}
-
-	public String getCatDesc() {
-		return catDesc;
-	}
-
-	public void setCatDesc(String catDesc) {
-		this.catDesc = catDesc;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
 
 }

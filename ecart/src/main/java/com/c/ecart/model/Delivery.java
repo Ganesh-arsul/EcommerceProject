@@ -6,7 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "delivery")
 public class Delivery {
@@ -25,38 +29,5 @@ public class Delivery {
 	
 	@Column(name = "status")
 	private String status;
-
-	public int getDeliveryId() {
-		return deliveryId;
-	}
-
-	public void setDeliveryId(int deliveryId) {
-		this.deliveryId = deliveryId;
-	}
-
-	public int getOrderId() {
-		return orderId;
-	}
-
-	public void setOrderId(int orderId) {
-		this.orderId = orderId;
-	}
-
-	public String getDeliveryDate() {
-		return deliveryDate;
-	}
-
-	public void setDeliveryDate(String deliveryDate) {
-		this.deliveryDate = deliveryDate;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
 
 }

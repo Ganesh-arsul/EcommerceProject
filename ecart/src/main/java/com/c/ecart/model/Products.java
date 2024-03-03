@@ -7,7 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "products")
 public class Products {
@@ -39,69 +43,4 @@ public class Products {
 	@Column(name = "cat_id")
 	private int CatId;
 
-	public int getProdId() {
-		return ProdId;
-	}
-
-	public void setProdId(int prodId) {
-		ProdId = prodId;
-	}
-
-	public String getProdName() {
-		return prodName;
-	}
-
-	public void setProdName(String prodName) {
-		this.prodName = prodName;
-	}
-
-	public String getProdDesc() {
-		return prodDesc;
-	}
-
-	public void setProdDesc(String prodDesc) {
-		this.prodDesc = prodDesc;
-	}
-
-	public String getProdImg() {
-		return prodImg;
-	}
-
-	public void setProdImg(String prodImg) {
-		this.prodImg = prodImg;
-	}
-
-	public String getImageName() {
-		return imageName;
-	}
-
-	public void setImageName(String imageName) {
-		this.imageName = imageName;
-	}
-
-	public double getProdPrice() {
-		return prodPrice;
-	}
-
-	public void setProdPrice(double prodPrice) {
-		this.prodPrice = prodPrice;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
-	public int getCatId() {
-		return CatId;
-	}
-
-	public void setCatId(int catId) {
-		CatId = catId;
-	}
-	
-	
 }

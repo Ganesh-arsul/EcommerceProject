@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
@@ -12,27 +13,34 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "Orders")
-public class Orders {
-	
+@Table(name = "sub_category")
+public class SubCategory {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "order_id")
-	private int orderId;
+	@Column(name = "sub_cat_id")
+	private int subCatId;
 	
-	@Column(name = "order_date")
-	private String orderDate;
+	@Column(name ="cat_name")
+	private String catName;
 	
-	@Column(name = "items")
-	private String items;
+	@Column(name = "cat_description")
+	private String catDesc;
 	
-	@Column(name = "total_price")
-	private double totalPrice;
+	@Lob
+	@Column(name = "cat_image")
+	private String catImage;
 	
-	@Column(name = "user_id")
-	private int userId;
+	@Column(name = "image_name")
+	private String imageName;
 	
 	@Column(name = "status")
 	private String status;
 
-}
+	@Column(name = "cat_id")
+	private int catId;
+
+		
+	}
+	
+
