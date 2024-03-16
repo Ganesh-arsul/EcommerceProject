@@ -1,11 +1,36 @@
 <div class="w-100 product">
-    <div class="card" style="width:400px">
-        <img class="card-img-top" src="assets\Tshirt.jpeg" alt="Card image">
+    <div class="card">
+        <img class="card-img-top" [src]="'data:image/webp;base64,'+product.prodImg" alt="Card image">
         <div class="card-body">
-          <h4 class="card-title" [innerHtml]="product.prodName"></h4>
-          <p class="card-text" [innerHtml]="product.prodDesc"></p>
-          <p class="card-text" [innerHtml]="'Rs.'+product.prodPrice"></p>
-          <a href="#" class="btn btn-primary">Add to Cart</a>
+            <h5 class="card-title" [innerHtml]="product.prodName"></h5>
+            <p class="card-text line-height text1 mt-3 text-truncate" [innerHtml]="product.prodDesc"></p>
+            <p class="card-text line-height bold text2" [innerHtml]="'Rs.'+product.prodPrice+'/-'"></p>
+            <a href="#" class="btn btn-primary btn-sm line-height"(click)="addTocart(product.prodId)">Add to Cart</a>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-fullscreen-sm-down">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+              Modal body..
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
         </div>
       </div>
+      
 </div>

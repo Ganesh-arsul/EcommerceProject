@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="sign-in">
+            <h4 class="text-center">Sign In</h4>
+            <div class="control">
+                <input type="text" name="username" placeholder="Enter Email" class="form-control" [(ngModel)]="user.email">
+            </div>
+            <div class="control">
+                <input type="text" name="password" placeholder="Enter Password" class="form-control" [(ngModel)]="user.password">
+            </div>
+            <div class="control d-grid">
+                <button class="btn btn-primary btn-block" (click)="signIn()">Sign In</button>
+            </div>
+            <div class="control">
+                <p class="text-center">Not yet Sign up? click <a href="/signup">Sign up</a></p>
+            </div>
+        </div> 
+    </div>
+</div>

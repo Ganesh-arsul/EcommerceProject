@@ -1,37 +1,53 @@
 <div class="Container-fluid">
-    <div class="row header"> 
+    <div class="row header fixed-top"> 
         <div class="col-1 logo">
             <img src="assets/icon/ecart-logo.jpg">
         </div>
         <div class="col-7 margin-top">
-            <input type="text" placeholder="Enter category or product name..." class="form-control">
+            <input type="text" [(ngModel)]="searchTxt" placeholder="Enter category or product name..." class="form-control">
         </div>
+
         <div class="col-2 sign-in-btn margin-top">
-            <button class="btn btn-primary">Sign In</button>
+            <a href="/signin" class="btn btn-primary">Sign In</a>
         </div>
+        
         <div class="col-1 cart margin-top">
             <div></div>
-                <span class="badge bg-danger">4</span>
-        </div>
-    
+            <span class="badge bg-danger">{{cartCount}}</span>
+        </div>    
     </div>
+    <div class="height1 mb-5"></div>
     <div class="row main-body">
         <div class="col-2 left-menu">
-            <ul class="list-group">
-                <li class="list-group-item cursor-pointer" *ngFor="let mainCat of mainCategories">
-                    <span class="cat-name" [innerHTML]="mainCat.catName"></span>
-                    <span class="material-symbols-outlined">
-                        arrow_forward_ios
-                        </span>
+            <ul class="list-group" *ngFor="let mainCat of mainCategories; let i = index">
+                <li class="list-group-item cursor-pointer d-flex"(click)="changeArrow(mainCat)" data-bs-toggle="collapse" [attr.data-bs-target]="'#category'+i">
+                    <span class="text-truncate cat-name" [innerHTML]="mainCat.catName"></span>
+                    <span class="badge material-symbols-outlined material-icons">{{(mainCat.isCollpase===true)? 'keyboard_arrow_down' : 'keyboard_arrow_right'}}</span>
                 </li>
+                <ul class="list-group collapse hide" [id]="'category'+i"  *ngFor="let cat of mainCat.categoryList;let j = index">
+                    <li class="list-group-item cursor-pointer list-group-item-success" (click)="changeCatArrow(cat)" data-bs-toggle="collapse" [attr.data-bs-target]="'#subcategory'+j">
+                        <span class="cat-name" [innerHTML]="cat.catName"></span>
+                        <span class="badge material-symbols-outlined material-icons">{{(cat.isCollapse === true) ? 'keyboard_arrow_down' : 'keyboard_arrow_right'}}</span>
+
+                    </li>
+                    <ul [class]="cat.cssClass" *ngFor="let subCat of cat.subCatList">
+                         <li class="list-group-item cursor-pointer list-group-item-secondary" [id]="'subcategory'+i">
+                            <span class="cat-name" [innerHTML]="subCat.catName"></span>  
+                        </li>    
+                    </ul>
+                </ul>
             </ul>
         </div>
         <div class="col-8 products">
-            <div *ngFor="let product of products">
-                <app-product [product]="product"></app-product>
+            <div *ngFor="let product of products | randomObj | filter : searchTxt">
+                <app-product [product]="product" (cartCount)="setCartCount($event)"></app-product>
            </div> 
         </div>
-        <div class="col-2 ads">RIGHT</div>
+        <div class="col-2 ads">
+            <div class="ad"><img src="./assets/sale1.jpeg"></div>
+            <div class="ad"><img src="./assets/sale2.jpeg"></div>
+            <div class="ad"><img src="./assets/sale3.png"></div>
+        </div>
     </div>
 
     <div class="row footer">

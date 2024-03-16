@@ -1,4 +1,41 @@
-div{
-    border:thin solid red;
+
+.product{
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 0px 6px gray;
+}
+.product .card{
+    /* border: thin solid transparent; */
+    border-radius: 4px;
+}
+
+.product img{
+    height: 300px;
+    width: 100%;
     
+}
+.cart-title
+{
+    font-size: 1.5rem;
+    line-height: 1rem;
+}
+.card-text{
+    font-size: 1rem;
+}
+
+.line-height{
+    line-height: 1rem;
+
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.text1{
+    font-size: 16px;
+}
+
+.text2{
+    font-size: 20px;
 }
